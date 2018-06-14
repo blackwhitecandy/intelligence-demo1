@@ -11,7 +11,9 @@ import org.springframework.web.bind.annotation.RequestParam;
  * 2018-05-22 15:41
  */
 @Controller
-
 public class LoginController {
-
+    @RequestMapping("/login")
+    public String login() {
+        return "login";
+    }
 }

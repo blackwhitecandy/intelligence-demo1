@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-//@ComponentScan(basePackages = "com.candy.intelligencedemo1.controller")
+@ComponentScan(basePackages = "com.candy.intelligencedemo1")
 public class IntelligenceDemo1Application {
 
 	public static void main(String[] args) {

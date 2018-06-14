@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>智能专利检索报告系统</title>
@@ -24,7 +24,7 @@
     <div class="content index-main"><div class="w">
         <h1 class="index-logo">复审无效决定及司法判决检索系统</h1>
         <div class="form-mod form-search">
-            <form action="detail.html">
+            <form th:action="@{/detail}">
                 <h4 class="tit">选择数据库：</h4>
                 <div class="item database">
                     <label class="lblc curr"><input type="radio" name="database" class="rdo" checked/>全库检索</label>
@@ -36,7 +36,7 @@
                 </div>
                 <div class="item">
                     <label class="lbl">申请号</label>
-                    <input type="text" id="" class="txt" placeholder=""/>
+                    <input type="text" id="" name="sqh" class="txt" placeholder=""/>
                     <select class="slt">
                         <option selected="" value="全文">全文</option>
                         <option value="名称">名称</option>
@@ -47,7 +47,7 @@
                 </div>
                 <div class="item">
                     <label class="lbl">待审查文本</label>
-                    <textarea class="txa" placeholder="请输入待审查文本的名称、摘要、权利要求书和全文文本内容"></textarea>
+                    <textarea class="txa" name="dscwb" placeholder="请输入待审查文本的名称、摘要、权利要求书和全文文本内容"></textarea>
                 </div>
                 <h4 class="tit">限定条件：</h4>
                 <div class="item">

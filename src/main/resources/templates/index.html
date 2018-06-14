@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="/css/base.css"/>
     <script type="text/javascript" src="/js/jquery-1.7.2.min.js"></script>
     <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript">
+
+        function getTextArea () {
+            var areaText = document.getElementsByName("searchText");
+        }
+    </script>
 </head>
 
 <body><div class="wrap index-wrap">
@@ -24,7 +30,7 @@
     <div class="content index-main"><div class="w">
         <h1 class="index-logo">复审无效决定及司法判决检索系统</h1>
         <div class="form-mod form-search">
-            <form th:action="@{/detail}">
+            <form th:action="@{/detail}" target="_blank">
                 <h4 class="tit">选择数据库：</h4>
                 <div class="item database">
                     <label class="lblc curr"><input type="radio" name="database" class="rdo" checked/>全库检索</label>
@@ -47,7 +53,7 @@
                 </div>
                 <div class="item">
                     <label class="lbl">待审查文本</label>
-                    <textarea class="txa" name="dscwb" placeholder="请输入待审查文本的名称、摘要、权利要求书和全文文本内容"></textarea>
+                    <textarea class="txa" name="searchText" placeholder="请输入待审查文本的名称、摘要、权利要求书和全文文本内容"></textarea>
                 </div>
                 <h4 class="tit">限定条件：</h4>
                 <div class="item">
@@ -109,7 +115,7 @@
                 </div>
                 <div class="btnbar">
                     <button type="reset" class="btnl">清空</button>
-                    <button type="submit" class="btn">检索</button>
+                    <button type="submit" class="btn" onclick="getTextArea();">检索</button>
                 </div>
             </form>
         </div>

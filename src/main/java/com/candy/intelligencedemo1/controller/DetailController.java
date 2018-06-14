@@ -15,8 +15,8 @@ public class DetailController {
     @RequestMapping("/detail")
     public String toDetail(HttpServletRequest request) {
         String sqh = request.getParameter("sqh");
-        String dscwb = request.getParameter("ddscwb");
-        System.out.println(sqh + dscwb + "oooooooooooooooooooooooooooooK");
+        String searchText = request.getParameter("searchText");
+        System.out.println(sqh + searchText + "oooooooooooooooooooooooooooooK");
         return "detail";
     }
 }

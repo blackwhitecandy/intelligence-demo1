@@ -1,55 +1,56 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js" xmlns:th="http://www.w3.org/1999/xhtml">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>login</title>
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css" />
-    <link rel="stylesheet" type="text/css" href="/css/demo.css" />
-    <!--必要样式-->
-    <link rel="stylesheet" type="text/css" href="/css/component.css" />
-    <!--[if IE]>
-    <script src="/js/html5.js"></script>
-    <![endif]-->
+    <meta content="text/html;charset=UTF-8"/>
+    <title>登录页面</title>
+    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}"/>
+    <style type="text/css">
+        body {
+            padding-top: 50px;
+        }
+        .starter-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+        .form-group input{
+            margin: auto;
+            width: 550px;
+        }
+    </style>
 </head>
 <body>
-<div class="container demo-1">
-    <div class="content">
-        <div id="large-header" class="large-header">
-            <canvas id="demo-canvas"></canvas>
-            <div class="logo_box">
-                <h3>智能专利检索报告系统欢迎您</h3>
-                <form th:action="@{/login}" method="post">
-                    <div class="input_outer">
-                        <span class="u_user"></span>
-                        <input name="username" class="text" style="color: #FFFFFF !important" type="text" placeholder="请输入账户">
-                    </div>
-                    <div class="input_outer">
-                        <span class="us_uer"></span>
-                        <input name="password" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
-                    </div>
-                    <div class="mb2"><input type="submit" value="Sign In ~" class="act-but submit"/></div>
-                    <!--<div class="mb2"><a class="act-but submit"  style="color: #FFFFFF">登录</a></div>-->
-                </form>
-                <!--<form th:href="@{/login}" name="f" method="post">
-                    <div class="input_outer">
-                        <span class="u_user"></span>
-                        <input name="logname" class="text" style="color: #FFFFFF !important" type="text" placeholder="请输入账户">
-                    </div>
-                    <div class="input_outer">
-                        <span class="us_uer"></span>
-                        <input name="logpass" class="text" style="color: #FFFFFF !important; position:absolute; z-index:100;"value="" type="password" placeholder="请输入密码">
-                    </div>
-                    <div class="mb2"><a class="act-but submit"  style="color: #FFFFFF">登录</a></div>
-                </form>-->
-            </div>
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Spring Security演示</a>
         </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a th:href="@{/}"> 首页 </a></li>
+
+            </ul>
+        </div><!--/.nav-collapse -->
     </div>
-</div><!-- /container -->
-<script src="/js/TweenLite.min.js"></script>
-<script src="/js/EasePack.min.js"></script>
-<script src="/js/rAF.js"></script>
-<script src="/js/demo-1.js"></script>
+</nav>
+<div class="container">
+
+    <div class="starter-template">
+        <p th:if="${param.logout}" class="bg-warning">已成功注销</p><!-- 1 -->
+        <p th:if="${param.error}" class="bg-danger">有错误，请重试</p> <!-- 2 -->
+        <h2>使用账号密码登录</h2>
+        <form name="form" th:action="@{/login}" action="/login" method="POST"> <!-- 3 -->
+            <div class="form-group">
+                <label for="username">账号</label>
+                <input type="text" class="form-control" name="username" value="" placeholder="账号" />
+            </div>
+            <div class="form-group">
+                <label for="password">密码</label>
+                <input type="password" class="form-control" name="password" placeholder="密码" />
+            </div>
+            <input type="submit" id="login" value="Login" class="btn btn-primary" />
+        </form>
+    </div>
+</div>
 </body>
 </html>

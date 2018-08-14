@@ -1,0 +1,473 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>检索报告 - 专利智能检索试验系统</title>
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="layer/layer.js"></script>
+</head>
+
+<body><div class="wrap detail-wrap">
+    <div class="header">
+        <div class="w clf">
+            <h1 class="logo"><a href="index.html">专利智能检索试验系统</a></h1>
+            <div class="login-info">
+                <span class="user">您好！<span class="name">Admin</span></span>
+                <a class="signout" href="login.html">[退出]</a>
+                <span class="job">机械部</span>
+                <span class="time">上次登录：2018-6-20</span>
+            </div>
+        </div>
+    </div><!-- header] -->
+    <div class="content detail-main"><div class="w">
+        <div class="crumb-head">
+            <a class="more" href="index.html"><i>&lt;&lt;</i>返回首页</a>
+            <h2 class="title">实用新型专利检索报告</h2>
+        </div>
+        <p class="detail-fun">
+            <a class="btn sml" href="#"><img src="images/icon-down.png"/>导出结果</a>
+        </p>
+        <div class="detail-top">
+            <ul class="clf">
+                <li>专利号：ZL201090000527X<a class="btnl sml" id="getInfo" href="javascript:;">获取信息</a></li>
+                <li>申请日：2010 年 03 月 26 日</li>
+                <li>优先权日：2009 年 03 月 31 日</li>
+                <li>授权公告日：2011 年 09 月 28 日</li>
+                <li>专利权人/请求人：兄弟工业株式会社</li>
+                <li>实用新型专利名称：带盒和带式打印机</li>
+            </ul>
+        </div>
+
+        <div class="detail-row">
+
+        </div>
+
+        <div class="select-mod">
+            <ol class="clf">
+                <li class="item">
+                    <h5 class="fl">主题分类：</h5>
+                    <span class="dt">（IPC）</span>
+                    <span class="dd">B41J 15/04<i></i></span>
+                    <span class="dd">B41J 3/407<i></i></span>
+                    <a href="javascript:void(0)" class="addto" title="添加属性">+</a>
+                    <a href="javascript:void(0)" class="empty" title="删除全部属性">×</a>
+                </li>
+                <li class="item">
+                    <h5 class="fl">检索领域：</h5>
+                    <span class="dd">B41J 15/04，15/18<i></i></span>
+                    <span class="dd">B41J 3/407<i></i></span>
+                    <span class="dd">B41J 15/04，15/18<i></i></span>
+                    <span class="dd">B41J 3/407<i></i></span>
+                    <span class="dd">B41J 15/04，15/18<i></i></span>
+                    <span class="dd">B41J 3/407<i></i></span>
+                    <a href="javascript:void(0)" class="addto" title="添加属性">+</a>
+                    <a href="javascript:void(0)" class="empty" title="删除全部属性">×</a>
+                </li>
+                <li class="item">
+                    <h5>在检索时查阅的电子数据库（数据库的名称和/或使用的检索方式）：</h5>
+                    <p class="dl">
+                        <span class="dd">CNPAT<i></i></span>
+                        <span class="dd">WPI<i></i></span>
+                        <span class="dd">EPODOC<i></i></span>
+                        <span class="dd">中国期刊网全文数据库<i></i></span>
+                        <a href="javascript:void(0)" class="addto" title="添加属性">+</a>
+                        <a href="javascript:void(0)" class="empty" title="删除全部属性">×</a>
+                    </p>
+                    <p class="dl">
+                        <span class="dd">兄弟工业<i></i></span>
+                        <span class="dd">爱普生<i></i></span>
+                        <a href="javascript:void(0)" class="addto" title="添加属性">+</a>
+                        <a href="javascript:void(0)" class="empty" title="删除全部属性">×</a>
+                    </p>
+                    <p class="dl">
+                        <span class="dd">带盒<i></i></span>
+                        <span class="dd">带闸<i></i></span>
+                        <span class="dd">带盒<i></i></span>
+                        <span class="dd">带闸<i></i></span>
+                        <span class="dd">带盒<i></i></span>
+                        <span class="dd">带闸<i></i></span>
+                        <span class="dd">带盒<i></i></span>
+                        <span class="dd">带闸<i></i></span>
+                        <span class="dd">带盒<i></i></span>
+                        <span class="dd">带闸<i></i></span>
+                        <a href="javascript:void(0)" class="addto" title="添加属性">+</a>
+                        <a href="javascript:void(0)" class="empty" title="删除全部属性">×</a>
+                    </p>
+                </li>
+            </ol>
+            <button type="submit" class="btn">重新检索</button>
+        </div>
+
+        <div class="detail-data array-mod">
+            <div class="sort-mod">
+            <span class="array">
+                <a href="javascript:void(0);" cmd="list" class="curr"><img src="images/icon-alist.png"/>列表</a>
+                <a href="javascript:void(0);" cmd='view' class=""><img src="images/icon-aview.png"/>附图</a>
+            </span>
+                <a href="javascript:void(0)" id="filterBtn" class="btn sml"><img src="images/icon-filter.png"/>筛选</a>
+                <p class="sort select-sort">
+                    <a href="javascript:void(0)" class="curr">中国专利</a>
+                    <a href="javascript:void(0)">国外专利</a>
+                    <a href="javascript:void(0)">非专利文献</a>
+                </p>
+            </div>
+
+            <div class="data-list">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="t0"></th>
+                        <th class="t1">类型</th>
+                        <th class="t2">国别</th>
+                        <th class="t3">文献号</th>
+                        <th class="t4">文献类别</th>
+                        <th class="t5">公开日期</th>
+                        <th class="t6">IPC分类号</th>
+                        <th class="t7">涉及权利要求项</th>
+                        <th class="t8">相关页数</th>
+                        <th class="t9">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="check"><input type="checkbox" checked class="ckb"/></td>
+                        <td>X</td>
+                        <td>JP</td>
+                        <td><a href="javascript:void(0)" class="num">昭63-186906</a></td>
+                        <td>A</td>
+                        <td>2015-6-29</td>
+                        <td>F01L1/04</td>
+                        <td>1-7</td>
+                        <td>说明书摘要，说明书第3页</td>
+                        <td><a href="#" class="btnl sml">加入列表</a></td>
+                    </tr>
+                    <tr>
+                        <td class="check"><input type="checkbox" checked class="ckb"/></td>
+                        <td>X</td>
+                        <td>JP</td>
+                        <td><a href="javascript:void(0)" class="num">昭63-186906</a></td>
+                        <td>A</td>
+                        <td>2015-6-29</td>
+                        <td>F01L1/04</td>
+                        <td>1-7</td>
+                        <td>说明书摘要，说明书第3页</td>
+                        <td><a href="#" class="btnl sml">加入列表</a></td>
+                    </tr>
+                    <tr>
+                        <td class="check"><input type="checkbox" class="ckb"/></td>
+                        <td>X</td>
+                        <td>JP</td>
+                        <td><a href="javascript:void(0)" class="num">昭63-186906</a></td>
+                        <td>A</td>
+                        <td>2015-6-29</td>
+                        <td>F01L1/04</td>
+                        <td>1-7</td>
+                        <td>说明书摘要，说明书第3页</td>
+                        <td><a href="#" class="btnl sml">加入列表</a></td>
+                    </tr>
+                    <tr>
+                        <td class="check"><input type="checkbox" class="ckb"/></td>
+                        <td>X</td>
+                        <td>JP</td>
+                        <td><a href="javascript:void(0)" class="num">昭63-186906</a></td>
+                        <td>A</td>
+                        <td>2015-6-29</td>
+                        <td>F01L1/04</td>
+                        <td>1-7</td>
+                        <td>说明书摘要，说明书第3页</td>
+                        <td><a href="#" class="btnl sml">加入列表</a></td>
+                    </tr>
+                    <tr>
+                        <td class="check"><input type="checkbox" class="ckb"/></td>
+                        <td>X</td>
+                        <td>JP</td>
+                        <td><a href="javascript:void(0)" class="num">昭63-186906</a></td>
+                        <td>A</td>
+                        <td>2015-6-29</td>
+                        <td>F01L1/04</td>
+                        <td>1-7</td>
+                        <td>说明书摘要，说明书第3页</td>
+                        <td><a href="#" class="btnl sml">加入列表</a></td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="data-view" style="display:none">
+                <ul class="clf">
+                    <li><div class="box">
+                        <div class="head">
+                            <p class="check"><input type="checkbox" checked class="ckb"/> 1</p>
+                            <p class="fun"><a href="#" class="btnl sml">加入列表</a></p>
+                        </div>
+                        <a href="javascript:void(0)" class="item">
+                            <img class="pic" src="images/temp/p01.jpg"/>
+                            <p class="name">昭63-186906</p>
+                        </a>
+                        <p class="num">F01L1/04</p>
+                    </div></li>
+                    <li><div class="box">
+                        <div class="head">
+                            <p class="check"><input type="checkbox" checked class="ckb"/> 2</p>
+                            <p class="fun"><a href="#" class="btnl sml">加入列表</a></p>
+                        </div>
+                        <a href="javascript:void(0)" class="item">
+                            <img class="pic" src="images/temp/p02.jpg"/>
+                            <p class="name">昭63-186906</p>
+                        </a>
+                        <p class="num">F01L1/04</p>
+                    </div></li>
+                    <li><div class="box">
+                        <div class="head">
+                            <p class="check"><input type="checkbox" class="ckb"/> 3</p>
+                            <p class="fun"><a href="#" class="btnl sml">加入列表</a></p>
+                        </div>
+                        <a href="javascript:void(0)" class="item">
+                            <img class="pic" src="images/temp/p01.jpg"/>
+                            <p class="name">昭63-186906</p>
+                        </a>
+                        <p class="num">F01L1/04</p>
+                    </div></li>
+                    <li><div class="box">
+                        <div class="head">
+                            <p class="check"><input type="checkbox" class="ckb"/> 4</p>
+                            <p class="fun"><a href="#" class="btnl sml">加入列表</a></p>
+                        </div>
+                        <a href="javascript:void(0)" class="item">
+                            <img class="pic" src="images/temp/p02.jpg"/>
+                            <p class="name">昭63-186906</p>
+                        </a>
+                        <p class="num">F01L1/04</p>
+                    </div></li>
+
+                </ul>
+            </div>
+
+            <div class="page-mod"><div class="pagination"></div></div>
+            <script src="js/jquery.pagination.js"></script>
+            <script>
+                $(function(){
+                    $('.pages').pagination({
+                        callback:function(index){
+                            $('.now').text(index);
+                        }
+                    },function(api){
+                        $('.now').text(api.getCurrent());
+                    });
+                    $('.pagination').pagination({
+                        totalData:500,
+                        showData:10,
+                        coping:true,
+                        jump:true,
+                    });
+                });
+            </script>
+        </div>
+
+        <div class="detail-compare array-mod">
+            <h4 class="tit">已选中对比文件：</h4>
+            <div class="sort-mod">
+            <span class="array">
+                <a href="javascript:void(0);" cmd="list" class="curr"><img src="images/icon-alist.png"/>列表</a>
+                <a href="javascript:void(0);" cmd='view' class=""><img src="images/icon-aview.png"/>附图</a>
+            </span>
+                <p class="sort select-sort">
+                    <a href="javascript:void(0)" class="curr">中国专利</a>
+                    <a href="javascript:void(0)">国外专利</a>
+                    <a href="javascript:void(0)">非专利文献</a>
+                </p>
+            </div>
+
+            <div class="data-list">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th class="t1">类型</th>
+                        <th class="t2">国别</th>
+                        <th class="t3">文献号</th>
+                        <th class="t4">文献类别</th>
+                        <th class="t5">公开日期</th>
+                        <th class="t6">IPC分类号</th>
+                        <th class="t7">涉及权利要求项</th>
+                        <th class="t8">相关页数</th>
+                        <th class="t9">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>X</td>
+                        <td>JP</td>
+                        <td><a href="javascript:void(0)" class="num">昭63-186906</a></td>
+                        <td>A</td>
+                        <td>2015-6-29</td>
+                        <td>F01L1/04</td>
+                        <td>1-7</td>
+                        <td>说明书摘要，说明书第3页</td>
+                        <td>
+                            <a href="javascript:void(0)" class="edit" title="编辑">编辑</a>
+                            <a href="javascript:void(0)" class="delete" title="删除">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>X</td>
+                        <td>JP</td>
+                        <td><a href="javascript:void(0)" class="num">昭63-186906</a></td>
+                        <td>A</td>
+                        <td>2015-6-29</td>
+                        <td>F01L1/04</td>
+                        <td>1-7</td>
+                        <td>说明书摘要，说明书第3页</td>
+                        <td>
+                            <a href="javascript:void(0)" class="edit" title="编辑">编辑</a>
+                            <a href="javascript:void(0)" class="delete" title="删除">删除</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="data-view" style="display:none">
+                <ul class="clf">
+                    <li><div class="box">
+                        <div class="head">
+                            <p class="check"><input type="checkbox" checked class="ckb"/> 1</p>
+                            <p class="fun">
+                                <a href="javascript:void(0)" class="edit" title="编辑">编辑</a>
+                                <a href="javascript:void(0)" class="delete" title="删除">删除</a>
+                            </p>
+                        </div>
+                        <a href="javascript:void(0)" class="item">
+                            <img class="pic" src="images/temp/p01.jpg"/>
+                            <p class="name">昭63-186906</p>
+                        </a>
+                        <p class="num">F01L1/04</p>
+                    </div></li>
+                    <li><div class="box">
+                        <div class="head">
+                            <p class="check"><input type="checkbox" checked class="ckb"/> 2</p>
+                            <p class="fun">
+                                <a href="javascript:void(0)" class="edit" title="编辑">编辑</a>
+                                <a href="javascript:void(0)" class="delete" title="删除">删除</a>
+                            </p>
+                        </div>
+                        <a href="javascript:void(0)" class="item">
+                            <img class="pic" src="images/temp/p02.jpg"/>
+                            <p class="name">昭63-186906</p>
+                        </a>
+                        <p class="num">F01L1/04</p>
+                    </div></li>
+                    <li><div class="box">
+                        <div class="head">
+                            <p class="check"><input type="checkbox" class="ckb"/> 3</p>
+                            <p class="fun">
+                                <a href="javascript:void(0)" class="edit" title="编辑">编辑</a>
+                                <a href="javascript:void(0)" class="delete" title="删除">删除</a>
+                            </p>
+                        </div>
+                        <a href="javascript:void(0)" class="item">
+                            <img class="pic" src="images/temp/p01.jpg"/>
+                            <p class="name">昭63-186906</p>
+                        </a>
+                        <p class="num">F01L1/04</p>
+                    </div></li>
+                    <li><div class="box">
+                        <div class="head">
+                            <p class="check"><input type="checkbox" class="ckb"/> 4</p>
+                            <p class="fun">
+                                <a href="javascript:void(0)" class="edit" title="编辑">编辑</a>
+                                <a href="javascript:void(0)" class="delete" title="删除">删除</a>
+                            </p>
+                        </div>
+                        <a href="javascript:void(0)" class="item">
+                            <img class="pic" src="images/temp/p02.jpg"/>
+                            <p class="name">昭63-186906</p>
+                        </a>
+                        <p class="num">F01L1/04</p>
+                    </div></li>
+
+                </ul>
+            </div>
+
+        </div>
+
+    </div></div><!-- content] -->
+
+
+    <div id="getInfoCon" class="get-infocon">
+        <p>自定义获取信息内容自定义获取信息内容自定义获取信息内容</p>
+    </div>
+    <div id="addtoSort" class="addto-sort">
+        <div class="dl">
+            <label><input type="checkbox" checked class="ckb"/><span class="dd">B41J 15/04</span></label>
+            <label><input type="checkbox" checked class="ckb"/><span class="dd">B41J 3/407</span></label>
+            <label><input type="checkbox" class="ckb"/><span class="dd">B41J 15/04</span></label>
+            <label><input type="checkbox" class="ckb"/><span class="dd">B41J 3/407</span></label>
+            <label><input type="checkbox" class="ckb"/><span class="dd">B41J 15/04</span></label>
+            <label><input type="checkbox" class="ckb"/><span class="dd">B41J 3/407</span></label>
+            <label><input type="checkbox" class="ckb"/><span class="dd">B41J 15/04</span></label>
+            <label><input type="checkbox" class="ckb"/><span class="dd">B41J 3/407</span></label>
+        </div>
+        <h5 class="view-tit">可视化联想：</h5>
+        <div class="view-sort"><img width="760" src="images/temp/01.jpg"/></div>
+    </div>
+    <div id="filterItem" class="filter-item">
+        <div class="item">
+            <select class="slt w2">
+                <option value="">申请号</option>
+            </select>
+            <input type="text" id="" class="txt" placeholder="请输入关键字..."/>
+            <button type="submit" class="btn">新增</button>
+        </div>
+        <div class="item">
+            <select class="slt w1">
+                <option value="">and</option>
+            </select>
+            <select class="slt w1">
+                <option value=""></option>
+            </select>
+            <select class="slt w2">
+                <option value="">申请号</option>
+            </select>
+            <input type="text" id="" class="txt" placeholder="请输入关键字..."/>
+            <select class="slt w1">
+                <option value=""></option>
+            </select>
+            <button type="submit" class="btn">新增</button>
+            <button type="reset" class="btnl">删除</button>
+        </div>
+    </div>
+    <div id="documentNum" class="document-num">
+        <div class="fl"><div class="box"><img width="100%" src="images/temp/02.jpg"/></div></div>
+        <div class="fr"><div class="box"><img width="100%" src="images/temp/02.jpg"/></div></div>
+    </div>
+    <div id="editItem" class="edit-item">
+        <div class="item">
+            <label class="lbl">类型</label>
+            <select class="slt">
+                <option value="">A</option>
+            </select>
+        </div>
+        <div class="item">
+            <label class="lbl">涉及权利要求项</label>
+            <select class="slt">
+                <option value="">1-7</option>
+            </select>
+        </div>
+        <div class="item">
+            <label class="lbl">相关页数</label>
+            <select class="slt">
+                <option value="">说明书摘要，说明书第3页</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="footer"><div class="w">
+        <p class="copyright">Copyright @ 2018 国家知识产权局  京ICP备18007110号</p>
+    </div></div><!-- footer] -->
+</div></body>
+</html>

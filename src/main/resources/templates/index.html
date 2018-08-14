@@ -1,10 +1,148 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="UTF-8">
-    <title>首页</title>
+    <meta charset="utf-8">
+    <title>专利智能检索试验系统</title>
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
 </head>
-<body>
-login success! now you are in index page. start your inteligence travel~
-</body>
+
+<body><div class="wrap index-wrap">
+    <div class="header">
+        <div class="w clf">
+            <h1 class="logo"><a href="index.html">专利智能检索试验系统</a></h1>
+            <div class="login-info">
+                <span class="user">您好！<span class="name" th:text="${username}">Admin</span></span>
+                <a class="signout" href="login.html">[退出]</a>
+                <span class="job">机械部</span>
+                <span class="time">上次登录：2018-6-20</span>
+            </div>
+        </div>
+    </div><!-- header] -->
+    <div class="content index-main"><div class="w">
+        <h1 class="index-logo">复审无效决定及司法判决检索系统</h1>
+        <div class="form-mod form-search">
+            <form th:action="@{/detail}" method="post">
+                <h4 class="tit">选择数据库：</h4>
+                <div class="item database">
+                    <label class="lblc curr"><input type="radio" name="database" class="rdo" checked/>全库检索</label>
+                    <label class="lblc"><input type="radio" name="database" class="rdo"/>CNABS</label>
+                    <label class="lblc"><input type="radio" name="database" class="rdo"/>VEN</label>
+                    <label class="lblc"><input type="radio" name="database" class="rdo"/>CNTXT</label>
+                    <label class="lblc"><input type="radio" name="database" class="rdo"/>SIPOABS</label>
+                    <label class="lblc"><input type="radio" name="database" class="rdo"/>CNKI</label>
+                </div>
+                <div class="item">
+                    <label class="lbl">申请号</label>
+                    <input type="text" id="" class="txt" placeholder=""/>
+                    <select class="slt">
+                        <option selected="" value="全文">全文</option>
+                        <option value="名称">名称</option>
+                        <option value="摘要">摘要</option>
+                        <option value="权利要求书">权利要求书</option>
+                        <option value="说明书">说明书</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label class="lbl">待审查文本</label>
+                    <textarea class="txa" placeholder="请输入待审查文本的名称、摘要、权利要求书和全文文本内容"></textarea>
+                </div>
+                <h4 class="tit">限定条件：</h4>
+                <div class="item">
+                    <label class="lbl">分类号</label>
+                    <input type="text" id="" class="txt" placeholder=""/>
+                </div>
+                <div class="item fl">
+                    <label class="lbl">申请人</label>
+                    <input type="text" id="" class="txt" placeholder=""/>
+                </div>
+                <div class="item">
+                    <label class="lbl">发明人</label>
+                    <input type="text" id="" class="txt" placeholder=""/>
+                </div>
+                <div class="item fl">
+                    <label class="lbl">检索日期</label>
+                    <span class="date">
+                    <select class="slt">
+                      <option selected="" value="不限">不限</option>
+                      <option value="2018">2018</option>
+                      <option value="2017">2017</option>
+                      <option value="2016">2016</option>
+                      <option value="2015">2015</option>
+                      <option value="2014">2014</option>
+                      <option value="2013">2013</option>
+                      <option value="2012">2012</option>
+                      <option value="2011">2011</option>
+                    </select>
+                    <i class="to">-</i>
+                    <select class="slt">
+                      <option selected="" value="不限">不限</option>
+                      <option value="2018">2018</option>
+                      <option value="2017">2017</option>
+                      <option value="2016">2016</option>
+                      <option value="2015">2015</option>
+                      <option value="2014">2014</option>
+                      <option value="2013">2013</option>
+                      <option value="2012">2012</option>
+                      <option value="2011">2011</option>
+                    </select>
+                </span>
+                </div>
+                <div class="item">
+                    <label class="lbl">检索范围</label>
+                    <select class="slt">
+                        <option selected="" value="全文">全文</option>
+                        <option value="名称">名称</option>
+                        <option value="摘要">摘要</option>
+                        <option value="权利要求书">权利要求书</option>
+                        <option value="说明书">说明书</option>
+                    </select>
+                </div>
+                <div class="item seano">
+                    <label class="lbl">检索号单</label>
+                    <label class="lblc"><input type="radio" name="seano" class="rdo" checked/>申请号</label>
+                    <label class="lblc"><input type="radio" name="seano" class="rdo"/>公开号</label>
+                    <a class="btnf sml">上传单号<input type="file"/></a><br/>
+                    <textarea class="txa" placeholder="在所输入号单中检索相关专利"></textarea>
+                </div>
+                <div class="btnbar">
+                    <button type="reset" class="btnl">清空</button>
+                    <button type="submit" class="btn">检索</button>
+                </div>
+            </form>
+        </div>
+        <div class="other-col">
+            <div class="recent-sea">
+                <div class="head">
+                    <h4 class="tit">最近检索</h4>
+                    <a class="more" href="history.html">更多<i>&gt;</i></a>
+                </div>
+                <ol class="clf">
+                    <li><span class="time">2018-02-20</span><a href="#">CN201210070147.9  带盒和带式打印机</a></li>
+                    <li><span class="time">2018-02-18</span><a href="#">CN201210070147.9  硒鼓</a></li>
+                    <li><span class="time">2018-02-20</span><a href="#">CN201210070147.9  带盒和带式打印机带盒和带式打印机带盒和带式打印机</a></li>
+                    <li><span class="time">2018-02-18</span><a href="#">CN201210070147.9  硒鼓</a></li>
+                    <li><span class="time">2018-02-20</span><a href="#">CN201210070147.9  带盒和带式打印机</a></li>
+                </ol>
+            </div>
+            <div class="common-data">
+                <div class="head">
+                    <h4 class="tit">常用资料</h4>
+                    <a class="more" href="#">更多<i>&gt;</i></a>
+                </div>
+                <ul class="clf">
+                    <li><a href="#">IPC查询</a></li>
+                    <li><a href="#">CPC查询</a></li>
+                    <li><a href="#">相关词查询</a></li>
+                </ul>
+            </div>
+        </div>
+    </div></div><!-- content] -->
+
+    <div class="footer"><div class="w">
+        <p class="copyright">Copyright @ 2018 国家知识产权局  京ICP备18007110号</p>
+    </div></div><!-- footer] -->
+</div></body>
 </html>

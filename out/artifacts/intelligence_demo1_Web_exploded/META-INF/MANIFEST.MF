@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: intelligence-demo1
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: dell2
+Implementation-Vendor-Id: com.candy
+Created-By: IntelliJ IDEA
+Build-Jdk: 1.8.0_11
+Main-Class: ${start-class}
+

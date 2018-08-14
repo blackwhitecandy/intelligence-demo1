@@ -1,56 +1,47 @@
-<!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<!doctype html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <meta content="text/html;charset=UTF-8"/>
-    <title>登录页面</title>
-    <link rel="stylesheet" th:href="@{css/bootstrap.min.css}"/>
-    <style type="text/css">
-        body {
-            padding-top: 50px;
-        }
-        .starter-template {
-            padding: 40px 15px;
-            text-align: center;
-        }
-        .form-group input{
-            margin: auto;
-            width: 550px;
-        }
-    </style>
+    <meta charset="utf-8">
+    <title>欢迎登录 - 专利智能检索试验系统</title>
+    <link rel="shortcut icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="css/base.css"/>
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
 </head>
-<body>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#">Spring Security演示</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <ul class="nav navbar-nav">
-                <li><a th:href="@{/}"> 首页 </a></li>
-
-            </ul>
-        </div><!--/.nav-collapse -->
-    </div>
-</nav>
-<div class="container">
-
-    <div class="starter-template">
-        <p th:if="${param.logout}" class="bg-warning">已成功注销</p><!-- 1 -->
-        <p th:if="${param.error}" class="bg-danger">有错误，请重试</p> <!-- 2 -->
-        <h2>使用账号密码登录</h2>
-        <form name="form" th:action="@{/login}" action="/login" method="POST"> <!-- 3 -->
-            <div class="form-group">
-                <label name="username">账号</label>
-                <input type="text" class="form-control" name="username" value="" placeholder="账号" />
-            </div>
-            <div class="form-group">
-                <label th:name="password">密码</label>
-                <input type="password" class="form-control" name="password" placeholder="密码" />
-            </div>
-            <input type="submit" id="login" value="Login" class="btn btn-primary" />
+<body class="login-page">
+<div class="login-main">
+    <div class="login-panel">
+        <p class="logo"><img src="images/logo.png" alt="专利智能检索试验系统" /></p>
+        <form id="login" th:action="@{/login}" method="post">
+            <ol class="login-form">
+                <li class="login-alert" style="display:none">
+                    <p class="alert-error">无效的用户名或密码</p>
+                </li>
+                <li>
+                    <input class="acc" type="text" name="username" id="username" placeholder="管理员账号" />
+                </li>
+                <li>
+                    <input class="pass" type="password" name="password" id="password" placeholder="登录密码" />
+                </li>
+                <li>
+                    <input class="code" type="text" name="code" id="code" placeholder="验证码" />
+                    <span class="code-mod">
+                    <img class="code-img" src="images/login-code.png" title="点击更换一张" />
+                    <a href="#" class="code-change" title="更换一张验证码"></a>
+                </span>
+                </li>
+                <li>
+                    <button type="submit">登 录</button>
+                    <label><input class="remember" type="checkbox" name="signin" checked/>记住账号</label>
+                </li>
+            </ol>
         </form>
     </div>
 </div>
+
+<div class="footer"><div class="w">
+    <p class="copyright">Copyright @ 2018 国家知识产权局  京ICP备18007110号</p>
+</div></div><!-- footer] -->
 </body>
 </html>

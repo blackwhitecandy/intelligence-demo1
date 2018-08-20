@@ -45,6 +45,7 @@ public class ResultJsonUtil {
                 patent.setZflh(patentJsonObject.getString(Constants.KEY_SICR_S).replaceAll("\\[", "")
                         .replaceAll("\"", "").replaceAll("\\]", "")); // 主分类号
                 patent.setZlmc(patentJsonObject.getString(Constants.KEY_TI)); // 发明名称
+                patent.setSqr(patentJsonObject.getString(Constants.KEY_SQR)); // 申请日
 
                 patentList.add(patent);
             }

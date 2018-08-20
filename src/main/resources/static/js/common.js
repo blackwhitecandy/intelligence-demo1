@@ -76,24 +76,44 @@ $(function() {
 // 排列形式
 $(function() {
     $(".array-mod .array a").click(function(){
-        var pat=$(this).parents(".array-mod"),
-            pat2=$(this).parents(".array"),
-            cmd=$(this).attr("cmd"),
+        // var pat=$(this).parents(".array-mod"),
+        //     pat2=$(this).parents(".array"),
+           var cmd=$(this).attr("cmd"),
             cu="curr";
-        if(cmd=="list"){	
-            pat2.find("[cmd='list']").addClass(cu);
-            pat2.find("[cmd='view']").removeClass(cu);
-            pat.find(".data-list").show();
-            pat.find(".data-view").hide();
+        if(cmd=="list"){
+            $("[cmd='list']").addClass(cu);
+            $("[cmd='view']").removeClass(cu);
+            $(".data-list").show();
+            $(".data-view").hide();
         }
         if(cmd=="view"){
-            pat2.find("[cmd='list']").removeClass(cu);
-            pat2.find("[cmd='view']").addClass(cu);
-            pat.find(".data-list").hide();
-            pat.find(".data-view").show();
+            $("[cmd='list']").removeClass(cu);
+            $("[cmd='view']").addClass(cu);
+            $(".data-list").hide();
+            $(".data-view").show();
         }
     });
 });
+// $(function() {
+//     $(".array-mod .array a").click(function(){
+//         var pat=$(this).parents(".array-mod"),
+//             pat2=$(this).parents(".array"),
+//             cmd=$(this).attr("cmd"),
+//             cu="curr";
+//         if(cmd=="list"){
+//             pat2.find("[cmd='list']").addClass(cu);
+//             pat2.find("[cmd='view']").removeClass(cu);
+//             pat.find(".data-list").show();
+//             pat.find(".data-view").hide();
+//         }
+//         if(cmd=="view"){
+//             pat2.find("[cmd='list']").removeClass(cu);
+//             pat2.find("[cmd='view']").addClass(cu);
+//             pat.find(".data-list").hide();
+//             pat.find(".data-view").show();
+//         }
+//     });
+// });
 // 单选项
 $(function() {
   $(".database label").click(function() {

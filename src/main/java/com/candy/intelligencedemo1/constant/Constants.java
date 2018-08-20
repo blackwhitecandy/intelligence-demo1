@@ -65,4 +65,8 @@ public class Constants {
      * 接口返回结果中 json的key值 ti 专利名称 发明名称
      */
     public static String KEY_TI = "ti";
+    /**
+     * 接口返回结果中 json的key值 sqr 申请日
+     */
+    public static String KEY_SQR = "sqr";
 }

@@ -24,7 +24,7 @@ html,body{height:100%}
 .header{position:relative;z-index:3}
 .content{position:relative;z-index:2}
 .footer{position:relative;z-index:1}
-.w{width:1000px;margin:0 auto}
+.w{width:1200px;margin:0 auto}
 .header .w{width:100%}
 /*** HEADER ***/
 .header{height:50px;background:#216ca5 url(../images/hbg.jpg) no-repeat center -160px;font-size:12px}
@@ -39,7 +39,7 @@ html,body{height:100%}
 
 /*** CONTENT ***/
 .content{padding:20px 0}
-.index-wrap .header .logo{display:none}
+/*.index-wrap .header .logo{display:none}*/
 .index-logo{width:300px;height:100px;line-height:100px;margin:20px auto;background:url(../images/logob.png) no-repeat;font-size:24px;color:#000;text-indent:-888px;text-align:center;overflow:hidden}
 .index-main .w{width:800px}
 .form-search{padding:20px 0}
@@ -141,7 +141,7 @@ html,body{height:100%}
 .data-list a{color:#014099}
 .data-view{overflow: hidden}
 .data-view ul{margin-left:-10px}
-.data-view li{width:25%}
+.data-view li{width:20%}
 .data-view li .box{padding-bottom:10px;margin:10px 0 0 10px;border:1px solid #fcdeb1;background-color: #fff; text-align: center}
 .data-view li .head{padding:5px 10px;border-bottom:1px solid #fcdeb1;background-color: #fde9ca;background-image: -webkit-linear-gradient(top,#fef4e5,#fde9ca);background-image: linear-gradient(180deg,#fef4e5,#fde9ca); text-align: left;overflow: hidden}
 .data-view li .check{float:left;font-size:12px; }
@@ -228,7 +228,7 @@ html,body{height:100%}
 .pagination .skip .jump{float:none;width:60px;margin:0 0 0 10px}
 /** FORM **/
 .txt,.slt,.txa{line-height:20px;padding:5px 9px;border:1px solid #ccc;color:#333}
-.txt{width:220px;height:20px}.slt{width:240px;height:32px}.txa{width:460px;min-height:100px}
+.txt{width:580px;height:20px}.slt{width:240px;height:32px}.txa{width:460px;min-height:100px}
 .txt:hover,.slt:hover,.txa:hover{border-color:#aaa}
 .txt:focus,.slt:focus,.txa:focus{border-color:#014099}
 .txt[disabled],.txt[disabled]:hover{border-color:#ccc;background-color:#e5e5e5}

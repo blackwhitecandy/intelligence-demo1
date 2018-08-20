@@ -1,0 +1,7 @@
+.likeA {
+    color: #014099 !important;
+}
+td.likeA:hover {
+    text-decoration:underline !important;   /* 当有鼠标悬停在链接上 */
+    cursor: pointer !important;
+}
